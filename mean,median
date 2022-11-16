@@ -1,0 +1,28 @@
+#include <stdio.h>
+void main()
+{
+        int sum=0,i,d[100],n;
+        float mean,med;
+        printf("Enter size:");
+        scanf("%d",&n);
+        printf("Enter data:");
+        for(i=0;i<n;i++)
+        {
+                scanf("%d",&d[i]);
+        }
+        for(i=0;i<n;i++)
+        {
+                sum+=d[i];
+                mean=sum/(float)n;
+        }
+        if(n%2==0)
+        {
+                med=(d[(n-2)/2]+d[((n-2)/2)+1])/2.0;
+        }
+        else
+        {
+                med=d[n/2+1];
+        }
+        printf("The mean is:%f",mean);
+        printf("The median is:%f",med);
+}
